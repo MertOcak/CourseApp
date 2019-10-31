@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Student>
+@* Liste olduğu için IENumerable kullanılır*@
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Course</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Phone</td>
+        <td>Confirm</td>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var student in Model)
+    {
+        <tr>
+            <td>@student.Name</td>
+            <td>@student.Email</td>
+            <td>@student.Phone</td>
+            <td>@student.Confirm</td>
+        </tr>
+    }
+   
+    </tbody>
+</table>
+   
+</body>
+</html>
